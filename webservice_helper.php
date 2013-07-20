@@ -77,7 +77,6 @@ if ( ! function_exists('utf8_array_encode'))
 
 
 
-
 	
 if ( ! function_exists('jsonReadable'))
 {
