@@ -13,8 +13,7 @@ Here I am adding an example how you can use this helper.
 4. 	Add the following code to the controller
 
 	<code>
-	public function signin()
-	{
+	public function signin(){
 		$this->load->model('user_model');
 		
 		$email = $this->input->get_post('email');
@@ -32,14 +31,13 @@ Here I am adding an example how you can use this helper.
 		
 		jsonOutput($output);
 	}
-	<code>
+	</code>
 	
 	
 5. Make a model named "user_model" add the following code to the model
 	
 	<code>
-	function signin()
-	{
+	function signin(){
 		$query = $this->db->get_where('user', array('email' => $email, 'password' => $password));
 		
 		if($query->num_rows() > 0)
