@@ -6,14 +6,15 @@ Here I am adding an example how you can use this helper.
 1. First download this code from github. Then copy the webservice_helper.php and paste it to the "helpers" folder which is located in "application" folder.
 
 2. Open the autoload.php from the "config" folder and add "webservice" as helper
-	$autoload['helper'] = array('url','file','webservice');
+	<pre><code> $autoload['helper'] = array('url','file','webservice'); </code></pre>
 	
 3. Make a table called "user" which have 3 field 'id', 'email', 'password' and add some dummy data into the database
 
 4. 	Add the following code to the controller
 
 	<pre><code>
-	public function signin(){
+	public function signin()
+	{
 		$this->load->model('user_model');
 		
 		$email = $this->input->get_post('email');
